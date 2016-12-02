@@ -18,7 +18,6 @@ const findVisitedCoordinate = (instructions, index = 0, currentDirection = 0, hi
     else {
         const currentCoordinate = history[history.length-1];
         const newDirection = currentDirection + instructions[index].turn;
-        const faszomArray = Array(instructions[index].go).fill(1);
         switch (newDirection % 4) {
             case 0:
                 route = Array(instructions[index].go).fill(1).map((a, i) => [currentCoordinate[0], currentCoordinate[1] + i + 1]);
